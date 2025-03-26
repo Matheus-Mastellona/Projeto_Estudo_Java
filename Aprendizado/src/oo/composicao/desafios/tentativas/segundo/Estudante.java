@@ -4,19 +4,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Estudante {
-    String nome;
-        String matricula;
-        List<Disciplina> disciplinas = new ArrayList<>();
+    private String nome;
+    private String matricula;
+    private List<Disciplina> disciplinas = new ArrayList<>();
 
-        void adicionarDisciplina(Disciplina disciplina){
-            this.disciplinas.add(disciplina);
-        }
+    public Estudante(String nome, String matricula) {
+        this.nome = nome;
+        this.matricula = matricula;
+    }
 
-        double obterMediaFinal(){
-            double total =0;
-            for (Disciplina disciplina : disciplinas) {
-                total+= disciplina.obterNotaFinal();
-            }
-            return total;
+    void adicionarDisciplina(Disciplina disciplina) {
+        this.disciplinas.add(disciplina);
+    }
+
+    double obterMediaFinal() {
+        double total = 0;
+        for (Disciplina disciplina : disciplinas) {
+            total += disciplina.obterNotaFinal();
         }
+        return total / disciplinas.size();
+    }
+
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    
 }
+
