@@ -6,9 +6,9 @@ public class Jogo {
         monstro.x = 10;
         monstro.y = 10;
 
-        Heroi heroi = new Heroi();
-        heroi.x = 10;
-        heroi.y = 11;
+        Heroi heroi = new Heroi(10, 11);
+        // heroi.x = 10;
+        // heroi.y = 11;
 
         System.out.println("O Monstro tem => " + monstro.vida + " HP");
         System.out.println("O Heroi tem => " + heroi.vida + " HP");
@@ -18,7 +18,6 @@ public class Jogo {
 
         System.out.println("O Monstro tem => " + monstro.vida + " HP");
         System.out.println("O Heroi tem => " + heroi.vida + " HP");
-
 
         /*
          * heroi.andar(Direcao.SUL);
