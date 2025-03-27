@@ -1,13 +1,13 @@
 package oo.heranca.desafio;
 
 public class Carro {
-    int velocidadeAtual;
+    public int velocidadeAtual;
 
-    void acelerar() {
+    public void acelerar() {
         velocidadeAtual += 5;
     }
 
-    void frear() {
+    public void frear() {
         if (velocidadeAtual >= 5) {
             velocidadeAtual -= 5;
         } else {
