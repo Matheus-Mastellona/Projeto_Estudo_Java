@@ -3,6 +3,7 @@ package oo.polimorfismo;
 public class Comida {
     private double peso;
 
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public Comida(double peso) {
         setPeso(peso);
     }

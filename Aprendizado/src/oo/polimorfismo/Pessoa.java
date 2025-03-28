@@ -21,7 +21,7 @@ public class Pessoa {
         if (peso >= 0)
             this.peso = peso;
     }
-
+    @Override
     public String toString() {
         return "O seu peso atual é: " + getPeso();
     }

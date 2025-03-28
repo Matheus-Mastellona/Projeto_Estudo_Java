@@ -15,8 +15,17 @@ public class Carro {
         }
     }
 
+    @Override
     public String toString() {
         return "Velocidade atual é " + velocidadeAtual + " km";
+    }
+
+    public String toStringFerrari() {
+        return "Velocidade atual da Ferrari é = " + velocidadeAtual + " km";
+    }
+
+    public String toStringBMW() {
+        return "Velocidade atual da BMW é = " + velocidadeAtual + " km";
     }
 
 }
