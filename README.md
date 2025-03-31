@@ -1,6 +1,6 @@
-# Java COMPLETO: Do Zero ao Profissional + Projetos!
+# Java Projetos
 
-Este repositório contém materiais e códigos desenvolvidos durante o curso [Java COMPLETO: Do Zero ao Profissional + Projetos!](https://www.udemy.com/course/fundamentos-de-programacao-com-java/?couponCode=ST22MT240325G3), que abrange desde os fundamentos da linguagem Java até tópicos avançados e projetos práticos.
+Este repositório contém materiais e códigos desenvolvidos durante o curso de Java que estou fazendo, que abrange desde os fundamentos da linguagem até tópicos avançados e projetos práticos.
 
 ## Conteúdo do Curso
 
