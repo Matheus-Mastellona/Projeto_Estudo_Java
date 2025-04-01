@@ -32,6 +32,7 @@ public class Desafio {
                 return n1 + 50;
             }
         };
+        
         Produto p = new Produto("iPad", 3235.89, 0.50);
 
         double resultado = valoProduto.andThen(impostoMunicipal).andThen(frete).apply(p.getPreco(), p.getDesconto());
