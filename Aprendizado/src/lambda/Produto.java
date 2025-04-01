@@ -16,4 +16,16 @@ public class Produto {
         double precoFinal = preco * (1 - desconto);
         return "Nome: " + nome + ", tem preço de R$2" + precoFinal;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public double getDesconto() {
+        return desconto;
+    }
 }
