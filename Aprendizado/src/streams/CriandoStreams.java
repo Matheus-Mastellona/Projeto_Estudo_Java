@@ -26,7 +26,7 @@ public class CriandoStreams {
 
         outrasLangs.parallelStream().forEach(print);
 
-        // Stream.generate(() -> "a").forEach(print);
-        // Stream.iterate(0, n -> n + 1).forEach(println);
+        Stream.generate(() -> "a").forEach(print);
+        Stream.iterate(0, n -> n + 1).forEach(println);
     }
 }
