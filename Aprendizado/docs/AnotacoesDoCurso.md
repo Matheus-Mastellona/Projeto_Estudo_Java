@@ -1,19 +1,22 @@
 
 ## **Guia Rápido Java**
 
-• \u = Valor Unitário ou Unicode
+• Atalho para aplicar Quick Fix no VS Code (sem mouse): <br>
+   Windows/Linux: Ctrl + . (Control + ponto)
+
+• \u = Valor Unitário ou Unicode <br>
   Exemplo: \u0061 (equivale a 'a')
 
 • Operador Ternário
-  (expressão booleana) ? código 1 : código 2;
+  (expressão booleana) ?<br> código 1 : código 2;
   Exemplo: int menor = (a < b) ? a : b;
 
-• Atalho do VS Code
+• Atalho do VS Code <br>
   Shift + Alt + Seta = Criar a mesma linha
 
 • Quando necessário reload, siga: Ctrl + Shift + P → "Reload Window"
 
-• Quando temos a seguinte expressão: System.out.println(); Sabemos que o out é um atributo pois não está sob parenteses, já o println é um metodo
+• Quando temos a seguinte expressão: System.out.println(); <br>Sabemos que o out é um atributo pois não está sob parenteses, já o println é um metodo
 
 • Link do sumario da interface: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/package-summary.html
 
