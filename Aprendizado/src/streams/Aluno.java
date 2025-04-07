@@ -40,9 +40,7 @@ public class Aluno {
                 return false;
         } else if (!nome.equals(other.nome))
             return false;
-        if (Double.doubleToLongBits(nota) != Double.doubleToLongBits(other.nota))
-            return false;
-        return true;
+        return Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
     }
 
 
