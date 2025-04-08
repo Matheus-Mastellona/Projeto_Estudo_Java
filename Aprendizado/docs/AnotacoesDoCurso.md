@@ -4,6 +4,9 @@
 • Atalho para aplicar Quick Fix no VS Code (sem mouse): <br>
    Windows/Linux: Ctrl + . (Control + ponto)
 
+• Atalho para selecionar a linha que está no VS Code (sem mouse):<br>
+   Ctrl + L no Windows
+   
 • \u = Valor Unitário ou Unicode <br>
   Exemplo: \u0061 (equivale a 'a')
 
