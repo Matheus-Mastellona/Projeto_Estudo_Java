@@ -2,8 +2,8 @@ package streams;
 
 public class Aluno {
 
-    final String nome;
-    final double nota;
+    public final String nome;
+    public final double nota;
 
     public Aluno(String nome, double nota) {
         this.nome = nome;
@@ -40,9 +40,7 @@ public class Aluno {
                 return false;
         } else if (!nome.equals(other.nome))
             return false;
-        if (Double.doubleToLongBits(nota) != Double.doubleToLongBits(other.nota))
-            return false;
-        return true;
+        return Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
     }
 
 
