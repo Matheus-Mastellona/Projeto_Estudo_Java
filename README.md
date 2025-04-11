@@ -17,7 +17,8 @@ Este repositório contém materiais e códigos desenvolvidos durante o curso de 
 - **Projetos Práticos**: Desenvolvimento de aplicações reais para consolidar o aprendizado.
 
 ## Estrutura do Repositório
-
-- `src/`: Contém os códigos-fonte organizados por módulos e temas abordados no curso.
-- `resources/`: Arquivos de apoio, como scripts SQL e outros recursos utilizados nos projetos.
-- `docs/`: Documentações adicionais e anotações relevantes.
+- `Aprendizado`
+  - `src/`: Contém os códigos-fonte organizados por módulos e temas abordados no curso.
+  - `resources/`: Arquivos de apoio, como scripts SQL e outros recursos utilizados nos projetos.
+  - `docs/`: Documentações adicionais e anotações relevantes.
+- `campo-minado`
