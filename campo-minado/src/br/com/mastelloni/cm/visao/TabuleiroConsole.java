@@ -1,5 +1,7 @@
 package br.com.mastelloni.cm.visao;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 
 import br.com.mastelloni.cm.excecao.ExplosaoException;
@@ -40,22 +42,35 @@ public class TabuleiroConsole {
         try {
             while (!tabuleiro.objetivoAlcancado()) {
                 System.out.println(tabuleiro);
-                
-                String 
+
+                String digitado = capturarValorDigitado("Digite (x,y): ");
+
+                Iterator<Integer> xy = Arrays.stream(digitado.split(",")).map(e -> Integer.parseInt(e.trim()))
+                        .iterator();
+                digitado = capturarValorDigitado("1 - Abrir ou 2 - (Des)Marcar: ");
+
+                if ("1".equalsIgnoreCase(digitado)) {
+                    tabuleiro.abrir(xy.next(), xy.next());
+                }else if ("2".equalsIgnoreCase(digitado)) {
+                    tabuleiro.alternarMarcacao(xy.next(), xy.next());
+                }
             }
+            System.out.println(tabuleiro);
             System.out.println("Você ganhou!!!");
         } catch (ExplosaoException e) {
+            System.out.println(tabuleiro);
             System.out.println("Você perdeu!");
         }
     }
 
-    private void capturarValorDigitado(String texto) {
-        System.out.println(texto);
+    private String capturarValorDigitado(String texto) {
+        System.out.print(texto);
         String digitado = entrada.nextLine();
-        
+
         if ("sair".equalsIgnoreCase(digitado)) {
             throw new SairException();
         }
+        return digitado;
     }
 
 }
