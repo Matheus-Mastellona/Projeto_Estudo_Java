@@ -4,7 +4,7 @@ public class Caixa<TIPO> {
 
     private TIPO coisa;
 
-    public void aguardar(TIPO coisa) {
+    public void guardar(TIPO coisa) {
         this.coisa = coisa;
     }
 
