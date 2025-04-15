@@ -1,6 +1,6 @@
 package observer;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class ChegadaAniversarianteEvent {
     private final Date horaDaChegada;
