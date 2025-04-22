@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class Tabuleiro {
+    
     private int linhas, colunas, minas;
 
     private final List<Campo> campos = new ArrayList<>();
@@ -70,5 +71,5 @@ public class Tabuleiro {
         campos.stream().forEach(c -> c.reiniciar());
         sortearMinas();
     }
-    
+
 }
