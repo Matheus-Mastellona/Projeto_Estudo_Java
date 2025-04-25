@@ -6,7 +6,7 @@ import java.util.List;
 public class Memoria {
 
     private enum TipoComando {
-        ZERAR, NUMERO, DIV, MULT, SUB, SOMA, IGUAL, VIRGULA
+        ZERAR, SINAL, PORCEN, NUMERO, DIV, MULT, SUB, SOMA, IGUAL, VIRGULA
     };
 
     private static final Memoria instancia = new Memoria();
@@ -45,6 +45,12 @@ public class Memoria {
             textoBuffer = "";
             substituir = false;
             ultimaOperacao = null;
+        } else if (tipoComando == TipoComando.SINAL && textoAutal.contains("-")) {
+            textoAutal = textoAutal.substring(1);
+        } else if (tipoComando == TipoComando.SINAL && !textoAutal.contains("-")) {
+            textoAutal = "-" + textoAutal;
+        } else if (tipoComando == TipoComando.PORCEN) {
+            textoAutal = calcularPorcentagem();
         } else if (tipoComando == TipoComando.NUMERO || tipoComando == TipoComando.VIRGULA) {
             textoAutal = substituir ? texto : textoAutal + texto;
             substituir = false;
@@ -60,7 +66,7 @@ public class Memoria {
 
     private String obterResultadoOperacao() {
 
-        if (ultimaOperacao == null) {
+        if (ultimaOperacao == null || ultimaOperacao == TipoComando.IGUAL) {
             return textoAutal;
         }
 
@@ -86,6 +92,25 @@ public class Memoria {
         return inteiro ? resultadoString.replace(",0", "") : resultadoString;
     }
 
+    private String calcularPorcentagem() {
+
+        if (textoBuffer.isEmpty()) {
+            return textoAutal;
+        }
+    
+        double base = Double.parseDouble(textoBuffer.replace(",", "."));
+        double percentual = Double.parseDouble(textoAutal.replace(",", "."));
+    
+        double resultado = base * (percentual / 100.0);
+
+        String resultadoString = Double.toString(resultado).replace(".", ",");
+
+        boolean inteiro = resultadoString.endsWith(",0");
+
+        return inteiro ? resultadoString.replace(",0", "") : resultadoString;
+    }
+    
+
     private TipoComando detectarTipoComando(String texto) {
 
         if (textoAutal.isEmpty() && texto == "0") {
@@ -109,6 +134,10 @@ public class Memoria {
                 return TipoComando.SUB;
             } else if ("=".equals(texto)) {
                 return TipoComando.IGUAL;
+            } else if ("±".equals(texto)) {
+                return TipoComando.SINAL;
+            } else if ("%".equals(texto)) {
+                return TipoComando.PORCEN;
             } else if (",".equals(texto) && !textoAutal.contains(",")) {
                 return TipoComando.VIRGULA;
             }
