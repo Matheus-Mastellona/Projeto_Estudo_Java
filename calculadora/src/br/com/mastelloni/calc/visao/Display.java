@@ -7,13 +7,15 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import br.com.mastelloni.calc.modelo.Memoria;
+
 public class Display extends JPanel {
 
     private final JLabel label;
 
     public Display() {
         setBackground(new Color(46, 49, 50));
-        label = new JLabel("1234,56");
+        label = new JLabel(Memoria.getInstancia().getTextoAtual());
         label.setForeground(Color.WHITE);
         label.setFont(new Font("SF Pro", Font.PLAIN, 30));
 
