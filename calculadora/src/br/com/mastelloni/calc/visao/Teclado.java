@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import br.com.mastelloni.calc.modelo.Memoria;
+
 public class Teclado extends JPanel implements ActionListener { // JPanel é um container
 
     private final Color COR_CINZA_ESCURO = new Color(68, 68, 68);
@@ -73,7 +75,7 @@ public class Teclado extends JPanel implements ActionListener { // JPanel é um 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() instanceof JButton) {
             JButton botao = (JButton) e.getSource();
-            System.out.println(botao.getText());
+            Memoria.getInstancia().processarComando(botao.getText());
         }
     }
 }
