@@ -11,7 +11,8 @@ public class Calculadora extends JFrame {
 
         organizarLayout();
 
-        setSize(232, 322); // tamanho da janela, no caso da calculadora
+        setSize(320, 500); // tamanho da janela, no caso da calculadora
+        // setUndecorated(true); retirar a barra de fechar/minimizar/restore
         setDefaultCloseOperation(EXIT_ON_CLOSE); // ao clicar em fechar janela, ela irá parar a aplicação
         setLocationRelativeTo(null); // ao abrir a aplicação a janela abrir no meio da tela
         setVisible(true); // criação de uma tela
