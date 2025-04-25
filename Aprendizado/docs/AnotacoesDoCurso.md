@@ -23,6 +23,12 @@
 
 • Link do sumario da interface: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/package-summary.html
 
+• TODOs 
+* TODO: Some TODO in my code
+* FIXME Some FIXME in my code
+* BUG: Some BUG in my code
+* NOTE: Some NOTE in my code
+
 
 ## **Especificadores de Formato**
 
